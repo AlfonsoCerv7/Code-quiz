@@ -1,13 +1,13 @@
 Survey
     .StylesManager
-    .applyTheme("modern");
+    .applyTheme("orange");
 
 var json = {
-    title: "American History",
+    title: "Simple coding quiz",
     showProgressBar: "bottom",
     showTimerPanel: "top",
-    maxTimeToFinishPage: 10,
-    maxTimeToFinish: 25,
+    maxTimeToFinishPage: 15,
+    maxTimeToFinish: 75,
     firstPageIsStarted: true,
     startSurveyText: "Start Quiz",
     pages: [
@@ -15,7 +15,7 @@ var json = {
             questions: [
                 {
                     type: "html",
-                    html: "You are about to start quiz by history. <br/>You have 10 seconds for every page and 25 seconds for the whole survey of 3 questions.<br/>Please click on <b>'Start Quiz'</b> button when you are ready."
+                    html: "You are about to start a simple coding quiz. <br/>You have 15 seconds for every question and 75 seconds to answer all five.<br/>Please click on <b>'Start Quiz'</b> button when you are ready to begin."
                 }
             ]
         }, {
