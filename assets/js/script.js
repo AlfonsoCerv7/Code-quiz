@@ -22,25 +22,51 @@ var json = {
             questions: [
                 {
                     type: "radiogroup",
-                    name: "civilwar",
-                    title: "When was the Civil War?",
+                    name: "codingtypes",
+                    title: "What is NOT a commonly used data type?",
                     choices: [
-                        "1750-1800", "1800-1850", "1850-1900", "1900-1950", "after 1950"
+                        "Strings", "Booleans", "Alerts", "Numbers"
                     ],
-                    correctAnswer: "1850-1900"
+                    correctAnswer: "Alerts"
                 }
             ]
         }, {
             questions: [
                 {
                     type: "radiogroup",
-                    name: "libertyordeath",
-                    title: "Who said 'Give me liberty or give me death?'",
+                    name: "if/then",
+                    title: "The condition in an if/else statement is wrapped in a?",
                     choicesOrder: "random",
                     choices: [
-                        "John Hancock", "James Madison", "Patrick Henry", "Samuel Adams"
+                        "quotes", "curly brackets", "parentheses", "square brackets"
                     ],
-                    correctAnswer: "Patrick Henry"
+                    correctAnswer: "curly brackets"
+                }
+            ]
+        }, {
+            questions: [
+                {
+                    type: "radiogroup",
+                    name: "arrays",
+                    title: "Arrays in javascript can be used to store what?",
+                    choicesOrder: "random",
+                    choices: [
+                        "numbers and strings", "other arrays", "booleans", "all of the above"
+                    ],
+                    correctAnswer: "all of the above"
+                }
+            ]
+        }, {
+            questions: [
+                {
+                    type: "radiogroup",
+                    name: "debug",
+                    title: "A great tool during development and debugging for printing code to the debugger is?",
+                    choicesOrder: "random",
+                    choices: [
+                        "console.log", "JavaScript", "Terminal/Bash", "for loops"
+                    ],
+                    correctAnswer: "console.log"
                 }
             ]
         }, {
@@ -48,13 +74,13 @@ var json = {
             questions: [
                 {
                     type: "radiogroup",
-                    name: "magnacarta",
-                    title: "What is the Magna Carta?",
+                    name: "strings",
+                    title: "String values must be inclosed in what to be assigned a variable",
                     choicesOrder: "random",
                     choices: [
-                        "The foundation of the British parliamentary system", "The Great Seal of the monarchs of England", "The French Declaration of the Rights of Man", "The charter signed by the Pilgrims on the Mayflower"
+                        "commas", "curly brackets", "parentheses", "quotes"
                     ],
-                    correctAnswer: "The foundation of the British parliamentary system"
+                    correctAnswer: "quotes"
                 }
             ]
         }
@@ -69,7 +95,7 @@ survey
     .add(function (result) {
         document
             .querySelector('#surveyResult')
-            .textContent = "Result JSON:\n" + JSON.stringify(result.data, null, 3);
+            .textContent = "Thanks for taking this simple quiz, reload the page to try again!"
     });
 
 $("#surveyElement").Survey({model: survey});
